@@ -1,0 +1,97 @@
+Renesas Optimizing Linker (W3.05.00 )             03-Dec-2023 19:22:37
+
+*** Options ***
+
+-subcommand=Linkerrxfft.tmp
+-MAKEUD="G:\git\Programacao Eletronica\fft-rx111\rxfft\Debug/rxfft_l.ud" 
+-library="G:\git\Programacao Eletronica\fft-rx111\rxfft\src\dsplib-rxv1\RX_DSP_NOFPU_LE.lib" 
+-noprelink 
+-input=".\src\rxfft.obj"
+-input=".\src/smc_gen/general\r_cg_hardware_setup.obj"
+-input=".\src/smc_gen/general\r_smc_cgc.obj"
+-input=".\src/smc_gen/general\r_smc_cgc_user.obj"
+-input=".\src/smc_gen/general\r_smc_interrupt.obj"
+-input=".\src/smc_gen/r_bsp/board/generic_rx111\hwsetup.obj"
+-input=".\src/smc_gen/r_bsp/mcu/all\dbsct.obj"
+-input=".\src/smc_gen/r_bsp/mcu/all\lowlvl.obj"
+-input=".\src/smc_gen/r_bsp/mcu/all\lowsrc.obj"
+-input=".\src/smc_gen/r_bsp/mcu/all\mcu_locks.obj"
+-input=".\src/smc_gen/r_bsp/mcu/all\r_bsp_common.obj"
+-input=".\src/smc_gen/r_bsp/mcu/all\r_bsp_cpu.obj"
+-input=".\src/smc_gen/r_bsp/mcu/all\r_bsp_interrupts.obj"
+-input=".\src/smc_gen/r_bsp/mcu/all\r_bsp_locking.obj"
+-input=".\src/smc_gen/r_bsp/mcu/all\r_bsp_mcu_startup.obj"
+-input=".\src/smc_gen/r_bsp/mcu/all\r_bsp_software_interrupt.obj"
+-input=".\src/smc_gen/r_bsp/mcu/all\r_rx_intrinsic_functions.obj"
+-input=".\src/smc_gen/r_bsp/mcu/all\resetprg.obj"
+-input=".\src/smc_gen/r_bsp/mcu/all\sbrk.obj"
+-input=".\src/smc_gen/r_bsp/mcu/rx111\mcu_clocks.obj"
+-input=".\src/smc_gen/r_bsp/mcu/rx111\mcu_init.obj"
+-input=".\src/smc_gen/r_bsp/mcu/rx111\mcu_interrupts.obj"
+-input=".\src/smc_gen/r_bsp/mcu/rx111\vecttbl.obj"
+-input=".\src/smc_gen/r_pincfg\Pin.obj"
+-library=".\rxfft.lib"
+-start=SU,SI,B_1,R_1,B_2,R_2,B,R/04,PResetPRG,C_1,C_2,C,C$*,D*,W*,L,P/0FFFE0000,FIXEDVECT/0FFFFFF80
+-output="rxfft.abs" 
+-form=absolute 
+-nomessage 
+-vect=_undefined_interrupt_source_isr 
+-list 
+-nooptimize 
+-rom=D=R,D_1=R_1,D_2=R_2 
+-cpu=RAM=00000000-00003fff,FIX=00080000-00083fff,FIX=00086000-00087fff,FIX=00088000-0008dfff,FIX=00090000-0009ffff,FIX=000a0000-000bffff,FIX=000c0000-000fffff,ROM=00100000-00101fff,FIX=007fc000-007fc4ff,FIX=007ffc00-007fffff,ROM=fffe0000-ffffffff 
+-nologo
+
+*** Error information ***
+
+*** Mapping List ***
+
+SECTION                            START      END         SIZE   ALIGN
+SU
+                                  00000004  00000403       400   4
+SI
+                                  00000404  00000503       100   4
+B_1
+                                  00000504  0000052b        28   1
+R_1
+                                  0000052c  0000057b        50   1
+B_2
+                                  0000057c  00000585         a   2
+R_2
+                                  00000586  00000586         0   1
+B
+                                  00000588  00000aaf       528   4
+R
+                                  00000ab0  00000ba7        f8   4
+PResetPRG
+                                  fffe0000  fffe0053        54   1
+C_1
+                                  fffe0054  fffe0054         0   1
+C_2
+                                  fffe0054  fffe005b         8   2
+C
+                                  fffe005c  fffe00d3        78   4
+C$DSEC
+                                  fffe00d4  fffe00f7        24   4
+C$BSEC
+                                  fffe00f8  fffe010f        18   4
+C$VECT
+                                  fffe0110  fffe050f       400   4
+D
+                                  fffe0510  fffe0607        f8   4
+D_1
+                                  fffe0608  fffe0657        50   1
+D_2
+                                  fffe0658  fffe0658         0   1
+W
+                                  fffe0658  fffe0658         0   4
+W_1
+                                  fffe0658  fffe0667        10   1
+W_2
+                                  fffe0668  fffe0668         0   2
+L
+                                  fffe0668  fffe06ad        46   4
+P
+                                  fffe06ae  fffe1a06      1359   1
+FIXEDVECT
+                                  ffffff80  ffffffff        80   4
